@@ -522,7 +522,7 @@
     }
 
     /* ============================================================
-       MENU DESTACADO (extra visual)
+       MENU DESTACADO 
     ============================================================ */
     #menu {
       background: var(--rojo);
@@ -592,6 +592,280 @@
       color: var(--dorado-claro);
       margin-top: 0.4rem;
     }
+
+    /* ============================================================
+       FORMULARIO
+    ============================================================ */
+    #reserva {
+      background: var(--blanco);
+    }
+    .reserva-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: start;
+    }
+    .reserva-info h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--cafe);
+      margin-bottom: 0.4rem;
+    }
+    .reserva-info p {
+      font-size: 0.88rem;
+      color: var(--texto-suave);
+      line-height: 1.7;
+      margin-bottom: 1.6rem;
+    }
+    .info-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 1.1rem;
+      padding: 1rem;
+      background: var(--crema);
+      border-radius: 10px;
+    }
+    .info-item .info-icon {
+      font-size: 1.4rem;
+      flex-shrink: 0;
+    }
+    .info-item .info-label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--dorado);
+      margin-bottom: 2px;
+    }
+    .info-item .info-value {
+      font-size: 0.9rem;
+      color: var(--texto);
+      font-weight: 600;
+      line-height: 1.4;
+    }
+    /* Form */
+    .form-card {
+      background: var(--crema);
+      border-radius: 20px;
+      padding: 2.4rem;
+      box-shadow: 0 8px 40px var(--sombra);
+    }
+    .form-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--cafe);
+      margin-bottom: 0.4rem;
+    }
+    .form-subtitle {
+      font-size: 0.85rem;
+      color: var(--texto-suave);
+      margin-bottom: 1.8rem;
+    }
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+    .form-group {
+      margin-bottom: 1.2rem;
+    }
+    .form-group label {
+      display: block;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--cafe-medio);
+      margin-bottom: 0.45rem;
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      border: 1.5px solid rgba(74,44,10,0.2);
+      border-radius: 8px;
+      background: var(--blanco);
+      color: var(--texto);
+      font-family: 'Nunito', sans-serif;
+      font-size: 0.92rem;
+      transition: border-color 0.25s, box-shadow 0.25s;
+      outline: none;
+      appearance: none;
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: var(--dorado);
+      box-shadow: 0 0 0 3px rgba(200,134,10,0.15);
+    }
+    .form-group input.error,
+    .form-group select.error,
+    .form-group textarea.error {
+      border-color: var(--rojo-claro);
+      box-shadow: 0 0 0 3px rgba(192,57,43,0.12);
+    }
+    .form-group .error-msg {
+      font-size: 0.75rem;
+      color: var(--rojo-claro);
+      margin-top: 4px;
+      display: none;
+    }
+    .form-group.has-error .error-msg { display: block; }
+    .form-group textarea { resize: vertical; min-height: 100px; }
+    .btn-submit {
+      width: 100%;
+      padding: 1rem;
+      background: var(--rojo);
+      color: var(--crema);
+      font-family: 'Nunito', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background 0.28s, transform 0.2s;
+      margin-top: 0.5rem;
+    }
+    .btn-submit:hover {
+      background: var(--rojo-claro);
+      transform: translateY(-2px);
+    }
+    .btn-submit:active { transform: scale(0.98); }
+    .form-success {
+      display: none;
+      text-align: center;
+      padding: 2rem 0;
+    }
+    .form-success .success-icon { font-size: 3rem; margin-bottom: 0.8rem; }
+    .form-success h4 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem;
+      color: var(--cafe);
+      margin-bottom: 0.5rem;
+    }
+    .form-success p { font-size: 0.9rem; color: var(--texto-suave); }
+
+    /* ============================================================
+       FOOTER
+    ============================================================ */
+    #footer {
+      background: var(--cafe);
+      color: var(--crema);
+      padding: 4rem 2rem 2rem;
+    }
+    .footer-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 3rem;
+      padding-bottom: 3rem;
+      border-bottom: 1px solid rgba(253,246,236,0.12);
+      margin-bottom: 2rem;
+    }
+    .footer-brand .footer-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--crema);
+      line-height: 1.2;
+      margin-bottom: 0.3rem;
+    }
+    .footer-brand .footer-tagline {
+      font-size: 0.72rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--dorado);
+      margin-bottom: 1rem;
+    }
+    .footer-brand p {
+      font-size: 0.85rem;
+      color: rgba(253,246,236,0.62);
+      line-height: 1.8;
+      max-width: 260px;
+    }
+    .footer-socials {
+      display: flex;
+      gap: 10px;
+      margin-top: 1.4rem;
+    }
+    .social-link {
+      width: 38px; height: 38px;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      border: 1px solid rgba(253,246,236,0.2);
+      font-size: 1rem;
+      color: var(--crema);
+      transition: background 0.25s, border-color 0.25s, transform 0.2s;
+      text-decoration: none;
+    }
+    .social-link:hover {
+      background: var(--dorado);
+      border-color: var(--dorado);
+      color: var(--cafe);
+      transform: translateY(-3px);
+    }
+    .footer-col h5 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--crema);
+      margin-bottom: 1.2rem;
+    }
+    .footer-col ul { list-style: none; }
+    .footer-col ul li {
+      margin-bottom: 0.6rem;
+    }
+    .footer-col ul li a {
+      font-size: 0.85rem;
+      color: rgba(253,246,236,0.6);
+      transition: color 0.2s;
+    }
+    .footer-col ul li a:hover { color: var(--dorado-claro); }
+    .footer-col .horario-item {
+      font-size: 0.82rem;
+      color: rgba(253,246,236,0.6);
+      margin-bottom: 0.5rem;
+      line-height: 1.5;
+    }
+    .footer-col .horario-item strong {
+      color: var(--crema);
+      font-weight: 700;
+    }
+    .footer-bottom {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    .footer-bottom p {
+      font-size: 0.8rem;
+      color: rgba(253,246,236,0.4);
+    }
+    .footer-bottom span { color: var(--dorado); }
+
+    /* ============================================================
+       SCROLL REVEAL
+    ============================================================ */
+    .reveal {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
 
 
   </style>
@@ -921,6 +1195,199 @@
     </div>
   </section>
 
+  <!-- ============================================================
+       FORMULARIO
+  ============================================================ -->
+  <section id="reserva">
+    <div class="section-inner">
+      <div class="reserva-grid">
+        <div class="reveal">
+          <span class="section-tag">Contáctanos</span>
+          <h2 class="section-title">Reserva tu<br>experiencia</h2>
+          <div class="divider"></div>
+          <p class="section-desc" style="margin-bottom: 2rem;">
+            Escríbenos con anticipación y te garantizamos la mejor mesa. Para grupos grandes, contáctanos directamente.
+          </p>
+          <div class="info-item">
+            <div class="info-icon">📍</div>
+            <div>
+              <div class="info-label">Dirección</div>
+              <div class="info-value">Cantón Las Marías, Jocoro<br>Morazán Sur, El Salvador</div>
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="info-icon">🕐</div>
+            <div>
+              <div class="info-label">Horarios</div>
+              <div class="info-value">Lun–Vie: 6:00 AM – 8:00 PM<br>Sáb–Dom: 6:00 AM – 9:00 PM</div>
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="info-icon">📞</div>
+            <div>
+              <div class="info-label">Teléfono / WhatsApp</div>
+              <div class="info-value">+503 0000-0000<br>(Adaptar número real)</div>
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="info-icon">📧</div>
+            <div>
+              <div class="info-label">Correo electrónico</div>
+              <div class="info-value">info@cocinadeninavicenta.com</div>
+            </div>
+          </div>
+          <div style="margin-top:1.4rem; border-radius:12px; overflow:hidden; border:2px solid var(--crema-oscura); box-shadow: 0 4px 18px var(--sombra);">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15505.2!2d-88.0289716!3d13.6140422!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f652de96151de9b%3A0xacaa08aad3d6fc0d!2sJocoro%2C%20Moraz%C3%A1n%2C%20El%20Salvador!5e0!3m2!1ses!2ssv!4v1716000000000!5m2!1ses!2ssv"
+              width="100%"
+              height="220"
+              style="border:0; display:block;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Ubicación La Cocina de Niña Vicenta — Jocoro, Morazán"
+            ></iframe>
+          </div>
+          <a
+            href="https://maps.app.goo.gl/U23pNWm9ve1cEQj46"
+            target="_blank"
+            rel="noopener"
+            style="display:inline-block; margin-top:0.75rem; font-size:0.83rem; font-weight:700; color:var(--rojo); letter-spacing:0.05em;"
+          >📍 Abrir ruta en Google Maps →</a>
+        </div>
+
+        <div class="reveal" style="transition-delay:0.15s">
+          <div class="form-card">
+            <h3 class="form-title">Reservar una mesa</h3>
+            <p class="form-subtitle">Recibirás confirmación en menos de 24 horas.</p>
+            <form id="reservaForm" novalidate>
+              <div class="form-row">
+                <div class="form-group" id="fg-nombre">
+                  <label for="nombre">Nombre completo *</label>
+                  <input type="text" id="nombre" name="nombre" placeholder="Juan Pérez" />
+                  <span class="error-msg">Por favor ingresa tu nombre.</span>
+                </div>
+                <div class="form-group" id="fg-telefono">
+                  <label for="telefono">Teléfono *</label>
+                  <input type="tel" id="telefono" name="telefono" placeholder="7000-0000" />
+                  <span class="error-msg">Ingresa un teléfono válido.</span>
+                </div>
+              </div>
+              <div class="form-group" id="fg-email">
+                <label for="email">Correo electrónico *</label>
+                <input type="email" id="email" name="email" placeholder="correo@ejemplo.com" />
+                <span class="error-msg">Ingresa un correo válido.</span>
+              </div>
+              <div class="form-row">
+                <div class="form-group" id="fg-fecha">
+                  <label for="fecha">Fecha de reserva *</label>
+                  <input type="date" id="fecha" name="fecha" />
+                  <span class="error-msg">Selecciona una fecha válida.</span>
+                </div>
+                <div class="form-group" id="fg-hora">
+                  <label for="hora">Hora *</label>
+                  <input type="time" id="hora" name="hora" min="06:00" max="20:00" />
+                  <span class="error-msg">Selecciona una hora válida.</span>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group" id="fg-personas">
+                  <label for="personas">Número de personas *</label>
+                  <select id="personas" name="personas">
+                    <option value="">Selecciona...</option>
+                    <option>1 persona</option>
+                    <option>2 personas</option>
+                    <option>3–5 personas</option>
+                    <option>6–10 personas</option>
+                    <option>Más de 10</option>
+                  </select>
+                  <span class="error-msg">Selecciona el número de personas.</span>
+                </div>
+                <div class="form-group" id="fg-tipo">
+                  <label for="tipo">Ocasión</label>
+                  <select id="tipo" name="tipo">
+                    <option value="">Selecciona...</option>
+                    <option>Almuerzo familiar</option>
+                    <option>Cena romántica</option>
+                    <option>Reunión de trabajo</option>
+                    <option>Celebración</option>
+                    <option>Turismo gastronómico</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="mensaje">Mensaje adicional</label>
+                <textarea id="mensaje" name="mensaje" placeholder="Alergias, preferencias, ocasión especial..."></textarea>
+              </div>
+              <button type="submit" class="btn-submit">Enviar solicitud de reserva</button>
+            </form>
+            <div class="form-success" id="formSuccess">
+              <div class="success-icon">✅</div>
+              <h4>¡Reserva recibida!</h4>
+              <p>Gracias por elegirnos. Te confirmaremos dentro de las próximas 24 horas al correo o teléfono indicado. ¡Te esperamos!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FOOTER — COMMIT 6
+  ============================================================ -->
+  <footer id="footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">La Cocina de<br>Niña Vicenta</div>
+        <div class="footer-tagline">Gastronomía Salvadoreña Auténtica</div>
+        <p>Tradición, sazón y familia desde el Cantón Las Marías, Jocoro, Morazán. Cada platillo lleva el amor y dedicación de Niña Vicenta.</p>
+        <div class="footer-socials">
+          <!-- Adaptar URLs a las redes sociales reales del negocio -->
+          <a href="https://www.facebook.com/" target="_blank" rel="noopener" class="social-link" aria-label="Facebook">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/" target="_blank" rel="noopener" class="social-link" aria-label="Instagram">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="https://wa.me/50300000000" target="_blank" rel="noopener" class="social-link" aria-label="WhatsApp">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+          </a>
+          <a href="https://www.tiktok.com/" target="_blank" rel="noopener" class="social-link" aria-label="TikTok">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V9.15a8.16 8.16 0 0 0 4.77 1.52V7.2a4.85 4.85 0 0 1-1-.51z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5>Navegación</h5>
+        <ul>
+          <li><a href="#nosotros">Nosotros</a></li>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#menu">Menú del día</a></li>
+          <li><a href="#reserva">Hacer reserva</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Horarios</h5>
+        <div class="horario-item"><strong>Lun – Vie</strong><br>6:00 AM – 8:00 PM</div>
+        <div class="horario-item"><strong>Sábado</strong><br>6:00 AM – 9:00 PM</div>        
+      </div>
+      <div class="footer-col">
+        <h5>Ubicación</h5>
+        <p style="font-size:0.85rem; color:rgba(253,246,236,0.6); line-height:1.8;">
+          Cantón Las Marías<br>
+          Dist. Jocoro, Morazán Sur<br>
+          Morazán, El Salvador<br><br>
+          <a href="https://maps.app.goo.gl/U23pNWm9ve1cEQj46" target="_blank" rel="noopener" style="color:var(--dorado-claro); font-weight:600; font-size:0.82rem;">
+            📍 Ver en Google Maps →
+          </a>
+        </p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© <span id="year"></span> La Cocina de Niña Vicenta · Todos los derechos reservados</p>
+      <p>Diseñado por: Alan W. Moris y Ovidio O. Martínez <span>♥</span> en El Salvador</p>
+    </div>
+  </footer>
     
 </body>
 </html>
