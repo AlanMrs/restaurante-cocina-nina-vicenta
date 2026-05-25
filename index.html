@@ -364,6 +364,86 @@
       margin: 1rem 0 1.8rem;
     }
 
+    /* ============================================================
+       NOSOTROS
+    ============================================================ */
+    #nosotros {
+      background: var(--blanco);
+    }
+    .nosotros-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: center;
+    }
+    .nosotros-image-wrap {
+      position: relative;
+    }
+    .nosotros-img-main {
+      width: 100%;
+      height: 480px;
+      object-fit: cover;
+      border-radius: 4px 80px 4px 80px;
+      box-shadow: 0 20px 60px var(--sombra);
+    }
+    .nosotros-img-badge {
+      position: absolute;
+      bottom: -24px;
+      right: -24px;
+      width: 140px; height: 140px;
+      border-radius: 50%;
+      background: var(--rojo);
+      border: 6px solid var(--blanco);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      box-shadow: 0 8px 28px var(--sombra);
+    }
+    .nosotros-img-badge .badge-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      font-weight: 900;
+      color: var(--dorado-claro);
+      line-height: 1;
+    }
+    .nosotros-img-badge .badge-text {
+      font-size: 0.62rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--crema);
+      line-height: 1.3;
+    }
+    .nosotros-features {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+    .nosotros-feat {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 0.9rem;
+      background: var(--crema);
+      border-radius: 8px;
+      border-left: 3px solid var(--dorado);
+    }
+    .nosotros-feat .feat-icon { font-size: 1.4rem; flex-shrink: 0; }
+    .nosotros-feat .feat-label {
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--cafe);
+      letter-spacing: 0.04em;
+    }
+    .nosotros-feat .feat-desc {
+      font-size: 0.78rem;
+      color: var(--texto-suave);
+      line-height: 1.5;
+    }
+
 
   </style>
 </head>
@@ -418,6 +498,68 @@
     <div class="hero-scroll">
       <span>Descubrir</span>
       <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       NOSOTROS
+  ============================================================ -->
+  <section id="nosotros">
+    <div class="section-inner">
+      <div class="nosotros-grid">
+        <div class="nosotros-image-wrap reveal">
+          <img
+            class="nosotros-img-main"
+            src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=80"
+            alt="Interior del restaurante La Cocina de Niña Vicenta"
+          />
+          <div class="nosotros-img-badge">
+            <span class="badge-num">15+</span>
+            <span class="badge-text">años de<br>tradición</span>
+          </div>
+        </div>
+        <div class="reveal" style="transition-delay:0.15s">
+          <span class="section-tag">Nuestra historia</span>
+          <h2 class="section-title">De la familia<br>a tu mesa</h2>
+          <div class="divider"></div>
+          <p class="section-desc" style="margin-bottom:1rem;">
+            Doña Vicenta comenzó cocinando para su familia en el Cantón Las Marías, en el corazón de Jocoro, Morazán. Con el tiempo, sus pupusas, sopas y carnes asadas se convirtieron en el secreto mejor guardado del sur de Morazán.
+          </p>
+          <p class="section-desc">
+            Hoy, <strong>La Cocina de Niña Vicenta</strong> es un espacio donde la gastronomía salvadoreña se celebra con orgullo: ingredientes frescos, recetas heredadas y el calor de casa en cada bocado.
+          </p>
+          <div class="nosotros-features">
+            <div class="nosotros-feat">
+              <div class="feat-icon">🌽</div>
+              <div>
+                <div class="feat-label">Ingredientes locales</div>
+                <div class="feat-desc">Directo del campo a tu plato</div>
+              </div>
+            </div>
+            <div class="nosotros-feat">
+              <div class="feat-icon">👩‍🍳</div>
+              <div>
+                <div class="feat-label">Recetas heredadas</div>
+                <div class="feat-desc">Tradición de generación en generación</div>
+              </div>
+            </div>
+            <div class="nosotros-feat">
+              <div class="feat-icon">🏡</div>
+              <div>
+                <div class="feat-label">Ambiente familiar</div>
+                <div class="feat-desc">Como en casa, pero mejor</div>
+              </div>
+            </div>
+            <div class="nosotros-feat">
+              <div class="feat-icon">⭐</div>
+              <div>
+                <div class="feat-label">Calidad garantizada</div>
+                <div class="feat-desc">Higiene y servicio de excelencia</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
