@@ -54,8 +54,6 @@ restaurante-la-cocina-de-nina-vicenta/
 └── README.md           ← Este archivo
 ```
 
-> El proyecto es de **un solo archivo** `index.html` que contiene el HTML, CSS y JavaScript integrados, tal como lo requiere la actividad: *"landing page de una sola página"*.
-
 ---
 
 ## 🧩 Secciones obligatorias implementadas
@@ -123,44 +121,6 @@ El formulario de reserva valida en tiempo real los siguientes campos:
 
 ---
 
-## 📦 Control de versiones — Historial de commits
-
-El proyecto fue desarrollado de forma incremental siguiendo buenas prácticas de Git:
-
-| # | Commit | Contenido |
-|---|--------|-----------|
-| 1 | `init: estructura base y navbar` | HTML base, variables CSS, navbar fija con anclas y menú hamburguesa |
-| 2 | `feat: hero section` | Imagen de fondo con zoom animado, título, subtítulo y CTAs |
-| 3 | `feat: seccion nosotros` | Historia del negocio, imagen con badge y tarjetas de características |
-| 4 | `feat: servicios y menu destacado` | CSS Grid de 6 servicios + sección de 8 platillos con precios |
-| 5 | `feat: formulario de reserva con validacion JS` | Validación completa, estados de error y mensaje de éxito |
-| 6 | `feat: footer y mapa embebido` | Columnas de footer, redes sociales SVG, mapa de Google Maps |
-| 7 | `fix: responsive y animaciones` | Media queries, IntersectionObserver, scroll reveal y pulido final |
-
----
-
-## 🚀 Instrucciones de uso
-
-### Ver localmente
-```bash
-# 1. Clonar el repositorio
-git clone https://github.com/tu-usuario/restaurante-la-cocina-de-nina-vicenta.git
-
-# 2. Abrir el archivo directamente en el navegador
-# No requiere servidor, no requiere instalación de dependencias
-open index.html
-```
-
-### Publicar en GitHub Pages
-```bash
-# 1. Ir a Settings del repositorio en GitHub
-# 2. Sección "Pages" → Source → "Deploy from a branch"
-# 3. Branch: main → Carpeta: / (root)
-# 4. Guardar — el sitio estará disponible en minutos
-```
-
----
-
 ## 🛠️ Tecnologías utilizadas
 
 | Tecnología | Versión | Uso |
@@ -186,19 +146,6 @@ open index.html
 | Móvil (< 680px) | ✅ Menú hamburguesa + columnas apiladas |
 
 Probado en: Chrome, Firefox, Edge y Safari (versiones modernas).
-
----
-
-## ✏️ Personalización pendiente
-
-Antes de publicar el sitio definitivamente, se deben actualizar los siguientes datos reales del negocio:
-
-- [ ] Número de teléfono / WhatsApp (`+503 XXXX-XXXX`)
-- [ ] URL de página de Facebook del restaurante
-- [ ] URL de perfil de Instagram
-- [ ] URL de perfil de TikTok
-- [ ] Correo electrónico del negocio
-- [ ] Precios actualizados del menú
 
 ---
 
