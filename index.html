@@ -866,8 +866,25 @@
       transform: translateY(0);
     }
 
-
-
+     /* ============================================================
+       RESPONSIVE
+    ============================================================ */
+    @media (max-width: 900px) {
+      .nosotros-grid,
+      .reserva-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+      .nosotros-img-main { height: 320px; }
+      .nosotros-img-badge { width: 110px; height: 110px; right: -10px; bottom: -10px; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 680px) {
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+      .hero-content { padding: 0 1.2rem; padding-top: 80px; }
+      .form-row { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+      section { padding: 4rem 1.2rem; }
+      .nosotros-features { grid-template-columns: 1fr; }
+    }
   </style>
 </head>
 <body>
@@ -1128,7 +1145,7 @@
       </div>
       <div class="menu-grid">
         <div class="plato-card reveal">
-          <div class="plato-emoji">🫓</div>
+          <div class="plato-emoji">🍝</div>
           <div>
             <div class="plato-name">Pupusas de Niña Vicenta</div>
             <div class="plato-desc">Revueltas, de chicharrón o de frijoles con queso. La receta original.</div>
@@ -1160,7 +1177,7 @@
           </div>
         </div>
         <div class="plato-card reveal" style="transition-delay:0.32s">
-          <div class="plato-emoji">🫙</div>
+          <div class="plato-emoji">🧆</div>
           <div>
             <div class="plato-name">Yuca con Chicharrón</div>
             <div class="plato-desc">Yuca frita crujiente con chicharrón dorado y encurtido de repollo.</div>
@@ -1219,14 +1236,14 @@
             <div class="info-icon">🕐</div>
             <div>
               <div class="info-label">Horarios</div>
-              <div class="info-value">Lun–Vie: 6:00 AM – 8:00 PM<br>Sáb–Dom: 6:00 AM – 9:00 PM</div>
+              <div class="info-value">Lun–Vie: 6:00 AM – 8:00 PM<br>Sáb: 6:00 AM – 9:00 PM</div>
             </div>
           </div>
           <div class="info-item">
             <div class="info-icon">📞</div>
             <div>
               <div class="info-label">Teléfono / WhatsApp</div>
-              <div class="info-value">+503 0000-0000<br>(Adaptar número real)</div>
+              <div class="info-value">+503 2681-3102</div>
             </div>
           </div>
           <div class="info-item">
@@ -1333,7 +1350,7 @@
   </section>
 
   <!-- ============================================================
-       FOOTER — COMMIT 6
+       FOOTER
   ============================================================ -->
   <footer id="footer">
     <div class="footer-grid">
@@ -1388,6 +1405,130 @@
       <p>Diseñado por: Alan W. Moris y Ovidio O. Martínez <span>♥</span> en El Salvador</p>
     </div>
   </footer>
+
+  <!-- ============================================================
+       JAVASCRIPT
+  ============================================================ -->
+  <script>
+    /* ---- Año dinámico ---- */
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    /* ---- Navbar scroll ---- */
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 60);
+    });
+
+    /* ---- Hamburger menu ---- */
+    const ham = document.getElementById('hamburger');
+    const navMobile = document.getElementById('navMobile');
+    ham.addEventListener('click', () => {
+      ham.classList.toggle('open');
+      navMobile.classList.toggle('open');
+    });
+    navMobile.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        ham.classList.remove('open');
+        navMobile.classList.remove('open');
+      });
+    });
+
+    /* ---- Scroll reveal ---- */
+    const revealEls = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          observer.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    revealEls.forEach(el => observer.observe(el));
+
+    /* ---- Validación de formulario ---- */
+    const form = document.getElementById('reservaForm');
+    const formSuccess = document.getElementById('formSuccess');
+
+    function setError(groupId, hasError) {
+      const group = document.getElementById(groupId);
+      if (!group) return;
+      const input = group.querySelector('input, select, textarea');
+      group.classList.toggle('has-error', hasError);
+      if (input) input.classList.toggle('error', hasError);
+    }
+
+    function validateEmail(email) {
+      return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    }
+
+    function validatePhone(phone) {
+      return /^[\d\s\-\+]{7,15}$/.test(phone.trim());
+    }
+
+    function validateFutureDate(dateStr) {
+      if (!dateStr) return false;
+      const selected = new Date(dateStr + 'T00:00:00');
+      const today = new Date();
+      today.setHours(0, 0, 0, 0);
+      return selected >= today;
+    }
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      let valid = true;
+
+      const nombre = document.getElementById('nombre').value.trim();
+      const telefono = document.getElementById('telefono').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const fecha = document.getElementById('fecha').value;
+      const hora = document.getElementById('hora').value;
+      const personas = document.getElementById('personas').value;
+
+      const errNombre = nombre.length < 2;
+      const errTelefono = !validatePhone(telefono);
+      const errEmail = !validateEmail(email);
+      const errFecha = !validateFutureDate(fecha);
+      const errHora = hora === '';
+      const errPersonas = personas === '';
+
+      setError('fg-nombre', errNombre);
+      setError('fg-telefono', errTelefono);
+      setError('fg-email', errEmail);
+      setError('fg-fecha', errFecha);
+      setError('fg-hora', errHora);
+      setError('fg-personas', errPersonas);
+
+      if (errNombre || errTelefono || errEmail || errFecha || errHora || errPersonas) {
+        valid = false;
+      }
+
+      if (valid) {
+        form.style.display = 'none';
+        formSuccess.style.display = 'block';
+      }
+    });
+
+    /* Limpiar error al escribir */
+    ['nombre','telefono','email','fecha','hora','personas'].forEach(id => {
+      const el = document.getElementById(id);
+      if (!el) return;
+      el.addEventListener('input', () => {
+        const group = el.closest('.form-group');
+        if (group) {
+          group.classList.remove('has-error');
+          el.classList.remove('error');
+        }
+      });
+    });
+
+    /* ---- Fecha mínima = hoy ---- */
+    const fechaInput = document.getElementById('fecha');
+    const today = new Date();
+    const dd = String(today.getDate()).padStart(2, '0');
+    const mm = String(today.getMonth() + 1).padStart(2, '0');
+    const yyyy = today.getFullYear();
+    fechaInput.min = `${yyyy}-${mm}-${dd}`;
+  </script>
     
 </body>
 </html>
