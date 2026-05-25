@@ -18,8 +18,7 @@ El sitio representa a un restaurante de gastronomía salvadoreña auténtica ubi
 
 ## 🌐 Ver el sitio en línea
 
-> 🔗 **[https://tu-usuario.github.io/restaurante-la-cocina-de-nina-vicenta](https://tu-usuario.github.io/restaurante-la-cocina-de-nina-vicenta)**  
-> *(Actualizar con la URL real de GitHub Pages una vez publicado)*
+> 🔗 **[https://alanmrs.github.io/restaurante-cocina-nina-vicenta](https://alanmrs.github.io/restaurante-cocina-nina-vicenta)**  
 
 ---
 
