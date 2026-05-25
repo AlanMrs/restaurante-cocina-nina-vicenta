@@ -444,6 +444,155 @@
       line-height: 1.5;
     }
 
+     /* ============================================================
+       SERVICIOS
+    ============================================================ */
+    #servicios {
+      background: var(--crema-oscura);
+    }
+    .servicios-header {
+      text-align: center;
+      margin-bottom: 3.5rem;
+    }
+    .servicios-header .divider {
+      margin: 1rem auto 1.8rem;
+    }
+    .servicios-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.8rem;
+    }
+    .servicio-card {
+      background: var(--blanco);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 4px 24px var(--sombra);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .servicio-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 16px 48px var(--sombra);
+    }
+    .servicio-img {
+      width: 100%;
+      height: 210px;
+      object-fit: cover;
+      transition: transform 0.5s;
+    }
+    .servicio-card:hover .servicio-img { transform: scale(1.06); }
+    .servicio-img-wrap { overflow: hidden; }
+    .servicio-body {
+      padding: 1.6rem;
+    }
+    .servicio-icon {
+      width: 46px; height: 46px;
+      background: var(--rojo);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+      margin-top: -3.2rem;
+      position: relative;
+      box-shadow: 0 4px 16px rgba(139,26,26,0.35);
+      border: 3px solid var(--blanco);
+    }
+    .servicio-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.18rem;
+      font-weight: 700;
+      color: var(--cafe);
+      margin-bottom: 0.5rem;
+    }
+    .servicio-desc {
+      font-size: 0.88rem;
+      color: var(--texto-suave);
+      line-height: 1.7;
+      margin-bottom: 1rem;
+    }
+    .servicio-tag {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--rojo-claro);
+      background: rgba(192,57,43,0.08);
+      padding: 0.3rem 0.8rem;
+      border-radius: 20px;
+    }
+
+    /* ============================================================
+       MENU DESTACADO (extra visual)
+    ============================================================ */
+    #menu {
+      background: var(--rojo);
+      position: relative;
+      overflow: hidden;
+    }
+    #menu::before {
+      content: '';
+      position: absolute;
+      top: -60px; right: -60px;
+      width: 320px; height: 320px;
+      border-radius: 50%;
+      background: rgba(200,134,10,0.12);
+    }
+    #menu::after {
+      content: '';
+      position: absolute;
+      bottom: -80px; left: -40px;
+      width: 240px; height: 240px;
+      border-radius: 50%;
+      background: rgba(200,134,10,0.08);
+    }
+    .menu-inner {
+      position: relative; z-index: 2;
+    }
+    .menu-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    .menu-header .divider { margin: 1rem auto 1.5rem; }
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.4rem;
+    }
+    .plato-card {
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(200,134,10,0.3);
+      border-radius: 12px;
+      padding: 1.4rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      transition: background 0.3s, border-color 0.3s;
+    }
+    .plato-card:hover {
+      background: rgba(200,134,10,0.12);
+      border-color: var(--dorado);
+    }
+    .plato-emoji { font-size: 2.4rem; flex-shrink: 0; }
+    .plato-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--crema);
+      margin-bottom: 0.2rem;
+    }
+    .plato-desc {
+      font-size: 0.78rem;
+      color: rgba(253,246,236,0.65);
+      line-height: 1.5;
+    }
+    .plato-precio {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--dorado-claro);
+      margin-top: 0.4rem;
+    }
+
 
   </style>
 </head>
@@ -557,6 +706,215 @@
                 <div class="feat-desc">Higiene y servicio de excelencia</div>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SERVICIOS
+  ============================================================ -->
+  <section id="servicios">
+    <div class="section-inner">
+      <div class="servicios-header reveal">
+        <span class="section-tag">Lo que ofrecemos</span>
+        <h2 class="section-title">Nuestros servicios</h2>
+        <div class="divider"></div>
+        <p class="section-desc" style="margin: 0 auto; text-align:center;">
+          Desde un desayuno típico hasta un evento especial, en La Cocina de Niña Vicenta tenemos todo lo que necesitas.
+        </p>
+      </div>
+      <div class="servicios-grid">
+
+        <div class="servicio-card reveal">
+          <div class="servicio-img-wrap">
+            <img
+              class="servicio-img"
+              src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=600&q=80"
+              alt="Comida típica salvadoreña"
+            />
+          </div>
+          <div class="servicio-body">
+            <div class="servicio-icon">🍽️</div>
+            <h3 class="servicio-name">Cocina Típica Salvadoreña</h3>
+            <p class="servicio-desc">
+              Pupusas, sopa de res, yuca con chicharrón, tamales y todos los platillos que hacen única a la gastronomía salvadoreña. Servicio de lunes a domingo.
+            </p>
+            <span class="servicio-tag">Disponible todos los días</span>
+          </div>
+        </div>
+
+        <div class="servicio-card reveal" style="transition-delay:0.1s">
+          <div class="servicio-img-wrap">
+            <img
+              class="servicio-img"
+              src="https://images.unsplash.com/photo-1529543544282-ea669407fca3?w=600&q=80"
+              alt="Reserva de mesa"
+            />
+          </div>
+          <div class="servicio-body">
+            <div class="servicio-icon">🪑</div>
+            <h3 class="servicio-name">Reserva de Mesa</h3>
+            <p class="servicio-desc">
+              Garantiza tu lugar para disfrutar en familia. Aceptamos grupos desde 2 hasta 30 personas con atención personalizada y menú especial para grupos.
+            </p>
+            <span class="servicio-tag">Previa reservación</span>
+          </div>
+        </div>
+
+        <div class="servicio-card reveal" style="transition-delay:0.2s">
+          <div class="servicio-img-wrap">
+            <img
+              class="servicio-img"
+              src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&q=80"
+              alt="Eventos y celebraciones"
+            />
+          </div>
+          <div class="servicio-body">
+            <div class="servicio-icon">🎉</div>
+            <h3 class="servicio-name">Eventos y Celebraciones</h3>
+            <p class="servicio-desc">
+              Cumpleaños, bautizos, quince años y reuniones de empresa. Organizamos tu evento con decoración, menú personalizado y servicio de meseros.
+            </p>
+            <span class="servicio-tag">Cotización sin costo</span>
+          </div>
+        </div>
+
+        <div class="servicio-card reveal" style="transition-delay:0.3s">
+          <div class="servicio-img-wrap">
+            <img
+              class="servicio-img"
+              src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600&q=80"
+              alt="Servicio de catering"
+            />
+          </div>
+          <div class="servicio-body">
+            <div class="servicio-icon">🚗</div>
+            <h3 class="servicio-name">Catering a Domicilio</h3>
+            <p class="servicio-desc">
+              Llevamos la sazón de Niña Vicenta a tu hogar u oficina. Disponible para Jocoro y municipios cercanos del departamento de Morazán.
+            </p>
+            <span class="servicio-tag">Zona Morazán Sur</span>
+          </div>
+        </div>
+
+        <div class="servicio-card reveal" style="transition-delay:0.4s">
+          <div class="servicio-img-wrap">
+            <img
+              class="servicio-img"
+              src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=600&q=80"
+              alt="Desayunos típicos"
+            />
+          </div>
+          <div class="servicio-body">
+            <div class="servicio-icon">☕</div>
+            <h3 class="servicio-name">Desayunos Típicos</h3>
+            <p class="servicio-desc">
+              Comienza el día con un desayuno salvadoreño: casamiento, huevos revueltos, cuajada fresca, plátano frito y café de palo recién hecho.
+            </p>
+            <span class="servicio-tag">6:00 AM – 10:00 AM</span>
+          </div>
+        </div>
+
+        <div class="servicio-card reveal" style="transition-delay:0.5s">
+          <div class="servicio-img-wrap">
+            <img
+              class="servicio-img"
+              src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?w=600&q=80"
+              alt="Tour gastronómico"
+            />
+          </div>
+          <div class="servicio-body">
+            <div class="servicio-icon">🌿</div>
+            <h3 class="servicio-name">Tour Gastronómico</h3>
+            <p class="servicio-desc">
+              Visitas guiadas a nuestra cocina y huerto propio. Aprende a preparar pupusas y platillos típicos con Niña Vicenta. Ideal para grupos escolares y turistas.
+            </p>
+            <span class="servicio-tag">Fines de semana</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       MENÚ DESTACADO
+  ============================================================ -->
+  <section id="menu">
+    <div class="section-inner menu-inner">
+      <div class="menu-header reveal">
+        <span class="section-tag" style="color:var(--dorado-claro);">Nuestros platillos</span>
+        <h2 class="section-title light">Lo mejor de nuestra cocina</h2>
+        <div class="divider"></div>
+        <p class="section-desc light" style="margin: 0 auto; text-align: center;">
+          Una selección de los favoritos de nuestros comensales, preparados con ingredientes frescos de la región.
+        </p>
+      </div>
+      <div class="menu-grid">
+        <div class="plato-card reveal">
+          <div class="plato-emoji">🫓</div>
+          <div>
+            <div class="plato-name">Pupusas de Niña Vicenta</div>
+            <div class="plato-desc">Revueltas, de chicharrón o de frijoles con queso. La receta original.</div>
+            <div class="plato-precio">$0.75 – $1.25</div>
+          </div>
+        </div>
+        <div class="plato-card reveal" style="transition-delay:0.08s">
+          <div class="plato-emoji">🍲</div>
+          <div>
+            <div class="plato-name">Sopa de Res</div>
+            <div class="plato-desc">Con yuca, elote, güisquil y papa. Caldito humeante y reconfortante.</div>
+            <div class="plato-precio">$4.50</div>
+          </div>
+        </div>
+        <div class="plato-card reveal" style="transition-delay:0.16s">
+          <div class="plato-emoji">🥩</div>
+          <div>
+            <div class="plato-name">Carne Asada a la Leña</div>
+            <div class="plato-desc">Corte grueso marinado, asado en leña de huerta. Con yuca y ensalada.</div>
+            <div class="plato-precio">$7.00</div>
+          </div>
+        </div>
+        <div class="plato-card reveal" style="transition-delay:0.24s">
+          <div class="plato-emoji">🥘</div>
+          <div>
+            <div class="plato-name">Salpicón de Res</div>
+            <div class="plato-desc">Carne deshebrada con rábano, hierbabuena y limón. Fresco y delicioso.</div>
+            <div class="plato-precio">$5.00</div>
+          </div>
+        </div>
+        <div class="plato-card reveal" style="transition-delay:0.32s">
+          <div class="plato-emoji">🫙</div>
+          <div>
+            <div class="plato-name">Yuca con Chicharrón</div>
+            <div class="plato-desc">Yuca frita crujiente con chicharrón dorado y encurtido de repollo.</div>
+            <div class="plato-precio">$3.50</div>
+          </div>
+        </div>
+        <div class="plato-card reveal" style="transition-delay:0.4s">
+          <div class="plato-emoji">🌽</div>
+          <div>
+            <div class="plato-name">Tamales de Elote</div>
+            <div class="plato-desc">Suaves y dulces, elaborados con maíz tierno. Receta de la abuela.</div>
+            <div class="plato-precio">$1.00</div>
+          </div>
+        </div>
+        <div class="plato-card reveal" style="transition-delay:0.48s">
+          <div class="plato-emoji">☕</div>
+          <div>
+            <div class="plato-name">Café de Palo</div>
+            <div class="plato-desc">Café molido al momento, de cosecha morazaneca. Servido bien caliente.</div>
+            <div class="plato-precio">$0.75</div>
+          </div>
+        </div>
+        <div class="plato-card reveal" style="transition-delay:0.56s">
+          <div class="plato-emoji">🍌</div>
+          <div>
+            <div class="plato-name">Fresco de Tamarindo</div>
+            <div class="plato-desc">Bebida natural artesanal. Sin colorantes ni preservantes.</div>
+            <div class="plato-precio">$1.00</div>
           </div>
         </div>
       </div>
